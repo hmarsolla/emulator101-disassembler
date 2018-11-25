@@ -1,0 +1,6 @@
+__pycache__/
+.vscode/
+
+disassembler.c
+invaders.h
+invaders_disassembled.txt
