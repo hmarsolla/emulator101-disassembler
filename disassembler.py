@@ -30,6 +30,7 @@ for x in range(bit_size):
     opcode_tuple = opcodes8080[byte]
     instruction = opcode_tuple[0]
     if not instruction:
+        opcode += 1
         continue
     
     offset = opcode_tuple[1] - 1
@@ -37,6 +38,7 @@ for x in range(bit_size):
 
     if offset > 0:
         arguments = get_registers(hex_dump, offset, position, op_register)
+        data_address_bytes = int(offset)
     else:
         arguments = op_register
 
